@@ -6,9 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "notion:extract": "node scripts/notion-extractor.js"
   },
   "dependencies": {
+    "@notionhq/client": "^2.2.14",
     "@supabase/supabase-js": "^2.39.0",
     "next": "^14.0.4",
     "react": "^18.2.0",
