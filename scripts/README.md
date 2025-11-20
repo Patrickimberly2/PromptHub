@@ -78,7 +78,33 @@ export NOTION_API_KEY=secret_your_actual_token_here
 
 ## Usage
 
-### Basic Usage
+### Option 1: Extract Only Page IDs (Quick)
+
+If you only need the page IDs from your database:
+
+```bash
+# Extract to default file (notion-ids.txt)
+npm run notion:extract-ids 2b0a3b31e44781338582c0e971f21019
+
+# Or specify custom output file
+npm run notion:extract-ids 2b0a3b31e44781338582c0e971f21019 my-ids.txt
+```
+
+Or run directly with node:
+
+```bash
+node scripts/notion-extract-ids.js 2b0a3b31e44781338582c0e971f21019
+```
+
+**Output format:** One ID per line
+```
+2b0a3b31e44781118514f414e9ee5a60
+2b0a3b31e447814fa72efd548f0f5cf5
+2b0a3b31e447818fae16d9faec91bc22
+...
+```
+
+### Option 2: Extract Full Database (Complete)
 
 Extract database and save to default file (`notion-data.json`):
 
